@@ -78,7 +78,7 @@ At its core, the controller classes inherit from a BaseController, which provide
 
 These controllers are the entry points for the various CRUD operations, each defined as an endpoint that the client can invoke.
 
-#### Request Lifecycle
+### Request Lifecycle
 
 When a request arrives at the server:
 
@@ -89,17 +89,13 @@ It adheres to an interface that defines the contract for all service operations,
 
 **Dependency Injection and DbContext Initialization:** The service class leverages dependency injection to utilize instances of DbContext. Upon construction of the service class, the DbContext is initialized, triggering Entity Framework Core's code-first approach. This process includes:
 
-**Checking for the existence of the database:**
-
-Creating the database if it does not exist, using the migrations and configurations defined within the DbContext and by the settings in the ConfigureServices method in startup.cs.
-
-**Business Logic Execution: ** With the DbContext prepared, the service class proceeds to execute the business logic. 
+1) **Checking for the existence of the database:** Creating the database if it does not exist, using the migrations and configurations defined within the DbContext and by the settings in the ConfigureServices method in startup.cs.
+2) **Business Logic Execution:**  With the DbContext prepared, the service class proceeds to execute the business logic. 
 It communicates with the database to perform the necessary CRUD operations, translating the requests into data changes or retrievals.
+3) **Response Generation:** After the service layer completes its data operations, a response is constructed and sent back to the client. 
+This response contains  the requested data or the outcome of a data manipulation operation, or relevant error messages.
 
-**Response Generation: ** After the service layer completes its data operations, a response is constructed and sent back to the client. 
-This response contains either the requested data, the outcome of a data manipulation operation, or relevant error messages.
-
-#### Enhanced Features:
+### Enhanced Features:
 
 The backend is engineered to ensure robustness through:
 
