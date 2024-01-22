@@ -46,7 +46,7 @@ Front end
 
 Adding a task: 
 
-<img src="public/image/adding.png" width="350px" />
+<img src="Frontend/public/adding.png" width="350px" />
 
 
 
