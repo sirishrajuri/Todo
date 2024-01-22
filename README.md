@@ -18,10 +18,12 @@ Todo list web app built with [ASP.NET Core](https://docs.microsoft.com/en-us/asp
 ## Technologies
 
 -   Backend
+    -   C# - Code first apporach. 
     -   [ASP NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
     -   Entity Framework Core
     -   [SQL Server](https://www.microsoft.com/en-us/sql-server): Microsoft Relational Database
-    -    ORM
+    -   Entity Framework as an ORM Tool.
+    -   SQL Server, LINQ, Dependency Injection.
 
 -   Frontend
     -   [ReactJS](https://reactjs.org/)
@@ -69,12 +71,46 @@ The `services` directory contains all the methods required to interact with the 
 By abstracting these operations into service methods, the components remain clean and focused on the UI logic, delegating data operations to the service layer. 
 The `todoService` provides a straightforward API for the components to interact with the backend, streamlining the process of sending and receiving data to and from the server.
 
+### Backend Architecture
+
+The backend architecture of our application is designed with a focus on maintainability and scalability. 
+At its core, the controller classes inherit from a BaseController, which provides a structured approach to handling API requests.
+
+These controllers are the entry points for the various CRUD operations, each defined as an endpoint that the client can invoke.
+
+#### Request Lifecycle
+
+When a request arrives at the server:
+
+Endpoint Invocation: The request is routed to the appropriate controller class endpoint. The controllers serve as an intermediary, orchestrating the flow of data between the frontend and the services layer.
+
+Service Layer Redirection: Once in the controller, the request is delegated to a service class. This service class is part of a broader service layer designed to handle business logic and data manipulation. 
+It adheres to an interface that defines the contract for all service operations, promoting a clean separation of concerns.
+
+Dependency Injection and DbContext Initialization: The service class leverages dependency injection to utilize instances of DbContext. Upon construction of the service class, the DbContext is initialized, triggering Entity Framework Core's code-first approach. This process includes:
+
+Checking for the existence of the database.
+Creating the database if it does not exist, using the migrations and configurations defined within the DbContext and informed by the settings established in the ConfigureServices method in startup.cs.
+Business Logic Execution: With the DbContext prepared, the service class proceeds to execute the business logic. It communicates with the database to perform the necessary CRUD operations, translating the requests into data changes or retrievals.
+
+Response Generation: After the service layer completes its data operations, a response is constructed and sent back to the client. This response contains either the requested data, the outcome of a data manipulation operation, or relevant error messages.
+
+Enhanced Features:
+
+The backend is engineered to ensure robustness through:
+
+Clear Abstractions: By isolating the business logic within the service layer, we maintain a clear abstraction that simplifies future enhancements and promotes testability.
+
+Efficient Data Handling: The DbContext plays a pivotal role in efficiently managing data access, leveraging Entity Framework Core's capabilities to interact with the database in an optimized manner.
+
+Scalable Configuration: The service configurations within startup.cs are designed to be scalable, making it straightforward to introduce new services as our application grows.
+
 ## Features Implemented
 
 - Create, Read, Update and Delete the tasks.
 - Real-time search functionality to quickly find tasks as the user types.
 - Percentage completion based on the number of tasks completed.
-- Added Catogories to easily idenfify the priority ones.
+- Added Categories to easily idenfify the priority ones.
 
 
 ## Front End Features:
