@@ -6,11 +6,11 @@ Todo list web app built with [ASP.NET Core](https://docs.microsoft.com/en-us/asp
 <table>
     <tbody>
         <tr>
-            <td><img src="images/login.png"  /></td>
-            <td rowspan=2><img src="images/todo-list-mobile.png" /></td>
+            <td><img src="Frontend/public/img1.png"  /></td>
+            <td rowspan=2><img src="Frontend/public/img2.png" /></td>
         </tr>
         <tr>
-            <td><img src="images/todo-list.png" /></td>
+            <td><img src="Frontend/public/img3.png" /></td>
         </tr>
     </tbody>
 </table>
