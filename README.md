@@ -37,3 +37,38 @@ Todo list web app built with [ASP.NET Core](https://docs.microsoft.com/en-us/asp
 ## Approach
 
 Front end 
+
+
+
+
+
+## Front End Features:
+
+Adding a task: 
+
+<img src="public/image/adding.png" width="350px" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
