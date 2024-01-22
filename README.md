@@ -19,6 +19,7 @@ Todo list web app built with [ASP.NET Core](https://docs.microsoft.com/en-us/asp
 
 -   Backend
     -   [ASP NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
+    -   Entity Framework Core
     -   [SQL Server](https://www.microsoft.com/en-us/sql-server): Microsoft Relational Database
     -    ORM
 
@@ -26,5 +27,13 @@ Todo list web app built with [ASP.NET Core](https://docs.microsoft.com/en-us/asp
     -   [ReactJS](https://reactjs.org/)
 -   [Docker](https://www.docker.com/)
 
+## Features
+
+- Create, Read, Update, and Delete operations for tasks.
+- React frontend with a user-friendly interface.
+- .NET backend API.
+- MS SQL database integration.
+
 ## Approach
 
+Front end 
