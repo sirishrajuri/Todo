@@ -25,3 +25,6 @@ Todo list web app built with [ASP.NET Core](https://docs.microsoft.com/en-us/asp
 -   Frontend
     -   [ReactJS](https://reactjs.org/)
 -   [Docker](https://www.docker.com/)
+
+## Approach
+
