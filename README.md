@@ -18,12 +18,12 @@ Todo list web app built with [ASP.NET Core](https://docs.microsoft.com/en-us/asp
 ## Technologies
 
 -   Backend
-    -   C# - Code first apporach. 
+    -   C#. 
     -   [ASP NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
-    -   Entity Framework Core
+    -   Entity Framework Core (Code First Approach)
     -   [SQL Server](https://www.microsoft.com/en-us/sql-server): Microsoft Relational Database
     -   Entity Framework as an ORM Tool.
-    -   SQL Server, LINQ, Dependency Injection.
+    -   LINQ, Dependency Injection.
 
 -   Frontend
     -   [ReactJS](https://reactjs.org/)
@@ -65,7 +65,7 @@ The `services` directory contains all the methods required to interact with the 
 
 - `createTodo`: POST request to `baseUrl/v1/todolist/items` to add a new task.
 - `getTodos`: GET request to `baseUrl/v1/todolist/items` to retrieve all tasks.
-- `updateTodo`: PUT request to `baseUrl/v1/todolist/items/{id}` to update an existing task.
+- `updateTodo`: POST request to `baseUrl/v1/todolist/items/{id}` to update an existing task.
 - `deleteTodo`: DELETE request to `baseUrl/v1/todolist/items/{id}` to remove a task.
 
 By abstracting these operations into service methods, the components remain clean and focused on the UI logic, delegating data operations to the service layer. 
