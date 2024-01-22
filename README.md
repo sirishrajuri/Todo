@@ -17,16 +17,11 @@ Todo list web app built with [ASP.NET Core](https://docs.microsoft.com/en-us/asp
 
 ## Technologies
 
--   [Docker](https://www.docker.com/): Platform to build, run, and share applications with containers.
 -   Backend
-    -   [ASP NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1): Cross-platform framework to build web apps
+    -   [ASP NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-3.1)
     -   [SQL Server](https://www.microsoft.com/en-us/sql-server): Microsoft Relational Database
-    -   [Dapper](https://dapper-tutorial.net/dapper): Micro ORM
-    -   Tests
-        -   [xUnit](https://xunit.net/): Unit testing tool for the .NET
-        -   [Fluent Assertions](https://fluentassertions.com/): Fluent API for asserting the results of unit tests
-        -   [Moq](https://github.com/moq/moq): Mocking framework for .NET
+    -    ORM
+
 -   Frontend
-    -   [ReactJS](https://reactjs.org/): JavaScript library for building user interfaces
-    -   [Typescript](https://www.typescriptlang.org/): Typed superset of JavaScript
-    -   [React Router DOM](https://reacttraining.com/react-router/web/guides/quick-start): Declarative routing for React
+    -   [ReactJS](https://reactjs.org/)
+-   [Docker](https://www.docker.com/)
