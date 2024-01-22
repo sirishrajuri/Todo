@@ -91,11 +91,12 @@ It adheres to an interface that defines the contract for all service operations,
 
 **Checking for the existence of the database:**
 
-Creating the database if it does not exist, using the migrations and configurations defined within the DbContext and informed by the settings established in the ConfigureServices method in startup.cs.
-Business Logic Execution: With the DbContext prepared, the service class proceeds to execute the business logic. 
+Creating the database if it does not exist, using the migrations and configurations defined within the DbContext and by the settings in the ConfigureServices method in startup.cs.
+
+**Business Logic Execution: ** With the DbContext prepared, the service class proceeds to execute the business logic. 
 It communicates with the database to perform the necessary CRUD operations, translating the requests into data changes or retrievals.
 
-Response Generation: After the service layer completes its data operations, a response is constructed and sent back to the client. 
+**Response Generation: ** After the service layer completes its data operations, a response is constructed and sent back to the client. 
 This response contains either the requested data, the outcome of a data manipulation operation, or relevant error messages.
 
 #### Enhanced Features:
